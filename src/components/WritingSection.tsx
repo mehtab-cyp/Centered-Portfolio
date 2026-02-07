@@ -1,35 +1,41 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { Box, Typography, Link, Stack } from '@mui/material';
 interface Article {
   date: string;
   title: string;
   description: string;
   url: string;
+  id: string;
 }
 const articles: Article[] = [
 {
   date: 'Jan 2026',
   title: 'On the Merits of Boring Technology',
   description: 'Why proven tools often beat cutting-edge ones.',
-  url: '#'
+  url: '/article/boring-technology',
+  id: 'boring-technology'
 },
 {
   date: 'Nov 2025',
   title: 'Building Design Systems That Last',
   description: 'Lessons from maintaining a component library at scale.',
-  url: '#'
+  url: '/article/design-systems',
+  id: 'design-systems'
 },
 {
   date: 'Aug 2025',
   title: 'The Art of Readable Code',
   description: 'How naming and structure communicate intent.',
-  url: '#'
+  url: '#',
+  id: 'readable-code'
 },
 {
   date: 'May 2025',
   title: 'Rethinking Client-Side State',
   description: "When you don't need a state management library.",
-  url: '#'
+  url: '#',
+  id: 'client-state'
 }];
 
 export function WritingSection() {
@@ -94,15 +100,20 @@ export function WritingSection() {
 
               <Box>
                 <Link
-                href={article.url}
+                component={article.url.startsWith('/') ? RouterLink : 'a'}
+                to={article.url.startsWith('/') ? article.url : undefined}
+                href={article.url.startsWith('/') ? undefined : article.url}
                 color="text.primary"
                 underline="hover"
                 sx={{
                   fontSize: '1.1rem',
                   fontWeight: 600,
-                  textDecorationColor: '#c0392b',
+                  textDecorationColor: '#0891b2',
+                  transition: 'all 0.2s ease',
                   '&:hover': {
-                    color: 'primary.main'
+                    color: 'primary.main',
+                    transform: 'translateX(4px)',
+                    display: 'inline-block'
                   }
                 }}>
 

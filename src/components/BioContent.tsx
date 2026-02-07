@@ -36,7 +36,7 @@ export function BioContent() {
           color="inherit"
           underline="always"
           sx={{
-            textDecorationColor: '#c0392b'
+            textDecorationColor: '#0891b2'
           }}>
 
           VGLX
@@ -58,7 +58,7 @@ export function BioContent() {
           color="inherit"
           underline="always"
           sx={{
-            textDecorationColor: '#c0392b'
+            textDecorationColor: '#0891b2'
           }}>
 
           Biohub

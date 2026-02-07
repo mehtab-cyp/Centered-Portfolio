@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   Container,
   CssBaseline,
@@ -7,13 +8,12 @@ import {
   Box } from
 '@mui/material';
 import { Header } from './components/Header';
-import { HeroImage } from './components/HeroImage';
-import { BioContent } from './components/BioContent';
-import { WritingSection } from './components/WritingSection';
-import { ProjectsSection } from './components/ProjectsSection';
-import { NowSection } from './components/NowSection';
 import { Footer } from './components/Footer';
-// Create an editorial theme
+import { HomePage } from './pages/HomePage';
+import { ContactPage } from './pages/ContactPage';
+import { UsesPage } from './pages/UsesPage';
+import { ArticlePage } from './pages/ArticlePage';
+
 const theme = createTheme({
   typography: {
     fontFamily: '"Lora", "Georgia", "Times New Roman", serif',
@@ -45,63 +45,68 @@ const theme = createTheme({
   },
   palette: {
     background: {
-      default: '#ffffff'
+      default: '#fafbfc'
     },
     text: {
       primary: '#1a1a1a',
       secondary: '#555555'
     },
     primary: {
-      main: '#c0392b' // Crimson red
+      main: '#0891b2'
     }
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 4
+          borderRadius: 8,
+          transition: 'all 0.3s ease'
         }
       }
     },
     MuiLink: {
       styleOverrides: {
         root: {
-          transition: 'color 0.2s ease'
+          transition: 'all 0.2s ease'
         }
       }
     }
   }
 });
+
 export function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container
-        maxWidth="sm"
-        sx={{
-          px: {
-            xs: 3,
-            sm: 0
-          }
-        }}>
-
-        <Box
+      <Router>
+        <Container
+          maxWidth="sm"
           sx={{
-            minHeight: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-            pt: 8
+            px: {
+              xs: 3,
+              sm: 0
+            }
           }}>
 
-          <Header />
-          <HeroImage />
-          <BioContent />
-          <WritingSection />
-          <ProjectsSection />
-          <NowSection />
-          <Footer />
-        </Box>
-      </Container>
+          <Box
+            sx={{
+              minHeight: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
+              pt: 8
+            }}>
+
+            <Header />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/uses" element={<UsesPage />} />
+              <Route path="/article/:id" element={<ArticlePage />} />
+            </Routes>
+            <Footer />
+          </Box>
+        </Container>
+      </Router>
     </ThemeProvider>);
 
 }
