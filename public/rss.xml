@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>jane.dev - Articles</title>
+    <link>https://jane.dev</link>
+    <description>Articles about graphics, engineering, and building systems</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Feb 2026 00:00:00 GMT</lastBuildDate>
+    <generator>jane.dev RSS Feed</generator>
+
+    <item>
+      <title>On the Merits of Boring Technology</title>
+      <link>https://jane.dev/article/boring-technology</link>
+      <pubDate>Wed, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <description>Why proven tools often beat cutting-edge ones.</description>
+      <content:encoded><![CDATA[
+        <p>There's a seductive allure to cutting-edge technology. The newest framework, the latest database, the most innovative architecture pattern. But after years of building systems, I've come to appreciate the profound value of boring technology.</p>
+
+        <p>Boring technology is proven. It's had its edges smoothed by thousands of production deployments. Its failure modes are documented. Its performance characteristics are well-understood. When something goes wrong at 3 AM, there's a Stack Overflow post about it.</p>
+      ]]></content:encoded>
+      <author>jane@example.com</author>
+      <category>Engineering</category>
+      <category>Philosophy</category>
+      <category>Technology</category>
+    </item>
+
+    <item>
+      <title>Building Design Systems That Last</title>
+      <link>https://jane.dev/article/design-systems</link>
+      <pubDate>Mon, 01 Nov 2025 00:00:00 GMT</pubDate>
+      <description>Lessons from maintaining a component library at scale.</description>
+      <content:encoded><![CDATA[
+        <p>A design system is more than a component library. It's a shared language between design and engineering, a set of constraints that accelerate decision-making, and a living artifact of your product's evolution.</p>
+
+        <p>The mistake I see most often is trying to build the perfect design system from day one. You document every possible variant, every edge case, every future use case. Then reality hits, and half of it goes unused while the other half is missing what you actually need.</p>
+      ]]></content:encoded>
+      <author>jane@example.com</author>
+      <category>Design</category>
+      <category>Engineering</category>
+      <category>Best Practices</category>
+    </item>
+
+  </channel>
+</rss>

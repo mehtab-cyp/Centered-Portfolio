@@ -7,3 +7,19 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+body {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+#root {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}

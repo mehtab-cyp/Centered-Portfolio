@@ -45,11 +45,12 @@ const theme = createTheme({
   },
   palette: {
     background: {
-      default: '#fafbfc'
+      default: '#ffffff',
+      paper: '#ffffff'
     },
     text: {
       primary: '#1a1a1a',
-      secondary: '#555555'
+      secondary: '#666666'
     },
     primary: {
       main: '#0891b2'

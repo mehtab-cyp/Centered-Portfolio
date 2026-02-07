@@ -76,6 +76,10 @@ export function Header() {
         <Stack direction="row" spacing={1}>
           <IconButton
             aria-label="RSS Feed"
+            href="/rss.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            component="a"
             size="small"
             sx={{
               color: 'text.secondary',
